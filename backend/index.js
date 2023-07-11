@@ -10,14 +10,15 @@ dotenv.config();
 
 
 const app = express();
+app.use(express.json());
 const port = process.env.PORT || 8800;
 
 // Database configuration
 const pool = new Pool({
   connectionString: process.env.DB_URL, // Connection URL for connecting to the PostgreSQL database
-  ssl: {
-    rejectUnauthorized: true, 
-  },
+  // ssl: {
+  //   rejectUnauthorized: true, 
+  // },
 });
 
 // app.get("/", (req, res) => {
@@ -44,6 +45,29 @@ app.get("/books", async (req, res) => {
   }
   
 });
+
+
+//POST 
+app.post("/books", async(req, res) => {
+  try {
+    const { title, description } = req.body;
+    const query ="INSERT INTO books (title, description) VALUES ($1, $2) RETURNING *";
+    const values = [title, description]; 
+    const result = await pool.query(query, values); 
+    const newBook = result.rows[0]; 
+
+    res.status(201).json(newBook); 
+  } catch (error) {
+    console.error("Error creating book:", error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while creating the book" }); 
+  
+  }
+  
+});
+
+
 
 app.listen (port, () => {
     console.log(`connected to ${port}`)
