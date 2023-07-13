@@ -48,18 +48,7 @@ const Update = () => {
         name="desc"
         onChange={handleChange}
       />
-      <input
-        type="number"
-        placeholder="Book price"
-        name="price"
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        placeholder="Book cover"
-        name="cover"
-        onChange={handleChange}
-      />
+   
       <button onClick={handleClick}>Update</button>
       {error && "Something went wrong!"}
       <Link to="/">See all books</Link>
