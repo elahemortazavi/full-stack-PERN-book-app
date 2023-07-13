@@ -6,9 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Add = () => {
   const [book, setBook] = useState({
     title: "",
-    desc: "",
-    price: null,
-    cover: "",
+    description: "",
   });
   const [error, setError] = useState(false);
 
@@ -41,8 +39,8 @@ const Add = () => {
       <textarea
         rows={5}
         type="text"
-        placeholder="Book desc"
-        name="desc"
+        placeholder="Book description"
+        name="description"
         onChange={handleChange}
       />
     

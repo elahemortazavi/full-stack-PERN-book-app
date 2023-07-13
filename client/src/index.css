@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -25,7 +26,7 @@ code {
     margin-top: 100px;
     cursor: pointer;
     border: none;
-    background-color: teal;
+    background-color: rgb(139, 139, 234);
     color: white;
     font-weight: bold;
     border-radius: 10px;
@@ -39,64 +40,69 @@ h1 {
   text-align: center;
     margin-bottom: 50px;
   }
-  .books {
+
+
+.books {
     display: flex;
   }
-   .book {
+.book {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
+      border: 1px solid rgb(236, 55, 55);
+      padding: 20px;
+      margin: 20px;
+      background-color: rgb(139, 139, 234);
+      border-radius: 10px;
+      
    }
-   img {
-        width: 200px;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-      button {
+   
+button {
         padding: 3px 6px;
         background-color: white;
         cursor: pointer;
         border-radius: 5px;
       }
-      .delete {
+.delete {
         border: 1px solid rgb(245, 191, 191);
         color: rgb(242, 100, 100);
       }
-      .update {
+.update {
         border: 1px solid rgb(204, 204, 243);
         color: rgb(139, 139, 234);
       }
-      .form {
+.form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     
       }
 
-    .input {
+.input {
       width: 250px;
       padding: 10px;
       border: 1px solid gray;
     }
-    textarea {
+textarea {
       padding: 10px;
     }
 
-    button {
+button {
       border: none;
       padding: 10px;
       background-color: white;
-      background-color: teal;
+      background-color: rgb(6, 226, 226);
       color: white;
       font-weight: bold;
       cursor: pointer;
     }
-    .addbtn {
+.addbtn {
       
        justify-content: center;
       text-align: center;
     }
-  
+  .header {
+    color: brown;
+  }
