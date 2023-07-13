@@ -1,16 +1,20 @@
 import express from "express";
-// const { Pool } = require("pg"); // PostgreSQL client library
-// const dotenv = require("dotenv"); // Module for loading environment variables from a .env file
+import cors from "cors";
 import pg from "pg";
 const { Pool } = pg;
-
-// import { Pool } from "pg";
 import dotenv from "dotenv";
 dotenv.config();
 
+// const { Pool } = require("pg"); // PostgreSQL client library
+// const dotenv = require("dotenv"); // Module for loading environment variables from a .env file
+// import { Pool } from "pg";
+
+
 
 const app = express();
+app.use(cors());
 app.use(express.json());
+
 const port = process.env.PORT || 8800;
 
 // Database configuration
@@ -45,6 +49,18 @@ app.get("/books", async (req, res) => {
   }
   
 });
+
+// app.get("/books", async (req, res) => {
+//   try {
+//     const client = await pool.connect();
+//     const result = await client.query("SELECT * FROM books");
+//     client.release();
+//     res.json(result.rows);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: "Internal server error" });
+//   }
+// });
 
 
 //POST 
