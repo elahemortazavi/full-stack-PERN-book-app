@@ -19,7 +19,7 @@ const Add = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8800/books", book);
+      await axios.post("https://pern-book-app.onrender.com/books", book);
       navigate("/");
     } catch (err) {
       console.log(err);
