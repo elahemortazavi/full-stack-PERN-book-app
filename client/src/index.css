@@ -25,16 +25,19 @@ code {
     padding: 20px;
     margin-top: 100px;
     cursor: pointer;
-    border: none;
+    border:1px solid brown;
     background-color: rgb(139, 139, 234);
-    color: white;
+    color: rgb(216, 5, 5);
     font-weight: bold;
     border-radius: 10px;
     justify-content: center;
     text-align: center;
+}
 
+.addHome:hover {
+  background-color: rgb(54, 110, 54);
+}
 
-  }
 h1 {
   justify-content: center;
   text-align: center;
@@ -56,8 +59,8 @@ h1 {
       margin: 20px;
       background-color: rgb(139, 139, 234);
       border-radius: 10px;
-      
-   }
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+      }
    
 button {
         padding: 3px 6px;
@@ -67,11 +70,11 @@ button {
       }
 .delete {
         border: 1px solid rgb(245, 191, 191);
-        color: rgb(242, 100, 100);
+        color: rgb(216, 5, 5);
       }
 .update {
         border: 1px solid rgb(204, 204, 243);
-        color: rgb(139, 139, 234);
+        color: rgb(3, 3, 76);
       }
 .form {
     display: flex;
@@ -93,7 +96,7 @@ button {
       border: none;
       padding: 10px;
       background-color: white;
-      background-color: rgb(6, 226, 226);
+      background-color: rgb(54, 163, 163);
       color: white;
       font-weight: bold;
       cursor: pointer;
@@ -104,5 +107,19 @@ button {
       text-align: center;
     }
   .header {
-    color: brown;
+    color: rgb(216, 5, 5);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: color 0.3s;
+  }
+  .header:hover {
+    color: #ff6600;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  }
+
+  .h2 {
+    color: aliceblue;
   }
